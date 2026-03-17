@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematik Lernsystem — Abitur 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,800;1,9..144,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">Operation Self</div>
+      <div class="sidebar-title">Mathematik<br>Lernsystem</div>
+      <div class="sidebar-sub">Abitur 2026 · Hamburg</div>
+    </div>
+    <div class="sidebar-progress">
+      <div class="prog-label"><span>Gesamtfortschritt</span><span id="total-pct">0%</span></div>
+      <div class="prog-bar-wrap"><div class="prog-bar-fill" id="total-bar" style="width:0%"></div></div>
+      <div class="prog-sub" id="total-count">0 / 0 Themen</div>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav"></nav>
+    <div class="sidebar-footer">
+      <button class="reset-btn" onclick="confirmReset()">⚠ Fortschritt zurücksetzen</button>
+    </div>
+  </aside>
+  <main class="main" id="main-content"></main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3>Fortschritt zurücksetzen?</h3>
+    <p>Alle Häkchen werden gelöscht. Kann nicht rückgängig gemacht werden.</p>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeModal()">Abbrechen</button>
+      <button class="btn-confirm" onclick="doReset()">Zurücksetzen</button>
+    </div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
